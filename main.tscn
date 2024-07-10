@@ -514,5 +514,21 @@ position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_qqucg")
 metadata/_edit_lock_ = true
 
+[node name="Target3" type="Area2D" parent="."]
+position = Vector2(58, 140)
+
+[node name="Sprite2D" type="Sprite2D" parent="Target3"]
+texture_filter = 1
+scale = Vector2(0.697917, 0.619792)
+texture = ExtResource("3_c6ivh")
+hframes = 4
+vframes = 4
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target3"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_qqucg")
+metadata/_edit_lock_ = true
+
 [connection signal="target_reached" from="Enemy/Navigation/NavigationAgent2D" to="Enemy" method="_on_navigation_agent_2d_target_reached"]
 [connection signal="timeout" from="Enemy/Navigation/Timer" to="Enemy" method="_on_timer_timeout"]
